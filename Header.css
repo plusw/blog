@@ -1,0 +1,35 @@
+header {
+    background-image: url("../public/source/header_2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+h1.blog_title {
+    text-align: center;
+    padding-top: 1.4em;
+    padding-bottom: 3em;
+    color: white;
+}
+
+/* * {
+    cursor: url("../public/source/lime.cur"), default;
+} */
+
+.navbar-nav>li {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+p {
+    font-size: large;
+}
+
+a.nav-link {
+    font-weight: bold;
+}
+
+.card {
+    margin: auto;
+    /* text-align: left; */
+}

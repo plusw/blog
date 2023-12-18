@@ -1,0 +1,22 @@
+.article_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 2px pink; */
+    flex-wrap: wrap;
+}
+
+#articles {
+    text-align: left;
+    width: 60%;
+    /* border: solid 2px black; */
+}
+
+a {
+    text-decoration: none;
+    color: rgb(44, 157, 233);
+}
+
+a:hover {
+    color: rgb(115, 209, 233);
+}
