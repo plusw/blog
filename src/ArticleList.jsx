@@ -10,9 +10,9 @@ function ArticleList() {
         // Fetch Markdown content for each file
         const fetchMarkdownContent = async () => {
             const contentPromises = markdownFiles.map(async (fileName) => {
-                const response2 = await fetch(`../public/article/`);
+                const response2 = await fetch(`https://plusw.github.io/blog/public/article/`);
                 console.log(response2)
-                const response = await fetch(`/blog/public/article/${fileName}`);
+                const response = await fetch(`https://plusw.github.io/blog/public/article/${fileName}`);
                 const data = await response.text();
                 return { fileName, data };
             });

@@ -4,11 +4,13 @@ import App from './App.jsx'
 import './index.css'
 // import ArticleList from "./ArticleList.jsx"
 import Article from "./Article.jsx"
+import Header from "./Header.jsx"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Header />
     {/* <App /> */}
-    {/* <ArticleList /> */}
-    <Article />
+    <ArticleList />
+    {/* <Article /> */}
   </React.StrictMode>,
 )
