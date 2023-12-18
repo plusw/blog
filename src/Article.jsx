@@ -6,7 +6,7 @@ function Article() {
     // console.log(markdownContent2)
     useEffect(() => {
         // Fetch your Markdown content
-        fetch('/plusw.github.io/article/2014-01-29-hello-2015.markdown')
+        fetch('/blog/article/2014-01-29-hello-2015.markdown')
             .then((response) => response.text())
             .then((data) => setMarkdownContent(data));
     }, []);

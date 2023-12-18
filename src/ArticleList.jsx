@@ -12,7 +12,7 @@ function ArticleList() {
             const contentPromises = markdownFiles.map(async (fileName) => {
                 const response2 = await fetch(`/plusw.github.io/public/article/`);
                 console.log(response2)
-                const response = await fetch(`/plusw.github.io/public/article/${fileName}`);
+                const response = await fetch(`/blog/public/article/${fileName}`);
                 const data = await response.text();
                 return { fileName, data };
             });
