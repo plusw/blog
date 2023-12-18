@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MarkdownComponent from './MarkdownComponent';
 import "./ArticleList.css"
+import Header from "./Header.jsx"
 
 function ArticleList() {
     const [markdownFiles, setMarkdownFiles] = useState(['demo01scrapyYoutube.markdown', '2015.markdown']);
@@ -10,11 +11,11 @@ function ArticleList() {
         // Fetch Markdown content for each file
         const fetchMarkdownContent = async () => {
             const contentPromises = markdownFiles.map(async (fileName) => {
-                // const response2 = await fetch(`https://plusw.github.io/blog/public/article/`);
-                const response2 = await fetch(`/blog/public/article/`);
+                const response2 = await fetch(`https://plusw.github.io/blog/public/article/`);
+                // const response2 = await fetch(`/blog/public/article/`);
                 console.log(response2)
-                // const response = await fetch(`https://plusw.github.io/blog/public/article/${fileName}`);
-                const response = await fetch(`/blog/public/article/${fileName}`);
+                const response = await fetch(`https://plusw.github.io/blog/public/article/${fileName}`);
+                // const response = await fetch(`/blog/public/article/${fileName}`);
                 const data = await response.text();
                 return { fileName, data };
             });
@@ -27,18 +28,21 @@ function ArticleList() {
     }, [markdownFiles]);
 
     return (
-        <div className='article_container'>
-            {markdownContents.map((markdownContent, index) => (
-                <>
-                    <div id="articles">
-                        <MarkdownComponent key={index} source={markdownContent.data} type={"article"} />
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                </>
-            ))}
-        </div >
+        <>
+            <Header />
+            <div className='article_container'>
+                {markdownContents.map((markdownContent, index) => (
+                    <>
+                        <div id="articles">
+                            <MarkdownComponent key={index} source={markdownContent.data} type={"article"} />
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                    </>
+                ))}
+            </div >
+        </>
     );
 }
 

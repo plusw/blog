@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 2px pink; */
+    flex-wrap: wrap;
+}
+
+.article {
+    width: 60%;
+    text-align: left;
+}
