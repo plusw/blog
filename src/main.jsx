@@ -9,11 +9,10 @@ import About from "./About"
 
 export default function App() {
   return (
-    // <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
     <HashRouter>
       <Routes>
-        <Route path="/blog" element={<ArticleList />} />
-        <Route path="/blog/about/" element={<About />} />
+        <Route path="https://plusw.github.io/blog" element={<ArticleList />} />
+        <Route path="https://plusw.github.io/blog/about" element={<About />} />
         {/* <Route path="" element={<ArticleList />} />
         <Route path="" element={<About />} /> */}
       </Routes>
