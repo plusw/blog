@@ -8,10 +8,12 @@ import About from "./About"
 
 export default function App() {
   return (
-    <BrowserRouter basename="/blog">
+    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
       <Routes>
-        <Route path="/blog" element={<ArticleList />} />
-        <Route path="/blog/about/" element={<About />} />
+        {/* <Route path="/blog" element={<ArticleList />} /> */}
+        {/* <Route path="/blog/about/" element={<About />} /> */}
+        <Route path="" element={<ArticleList />} />
+        <Route path="" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
