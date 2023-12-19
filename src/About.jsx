@@ -11,7 +11,7 @@ const About = () => {
 
     return (
         <>
-            <Header title="About me" backgroundImage="https://plusw.github.io/blog/#/public/source/img/hx.jpg" />
+            <Header title="About me" backgroundImage="/blog/public/source/img/hx.jpg" />
             <br />
             <br />
             <br />

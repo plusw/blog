@@ -14,7 +14,7 @@ function ArticleList() {
                 // const response2 = await fetch(`https://plusw.github.io/blog/public/article/`);
                 // const response2 = await fetch(`/blog/public/article/`);
 
-                const response = await fetch(`https://plusw.github.io/blog/#/public/article/${fileName}`);
+                const response = await fetch(`https://plusw.github.io/blog/public/article/${fileName}`);
                 // const response = await fetch(`/blog/public/article/${fileName}`);
                 const data = await response.text();
                 return { fileName, data };
