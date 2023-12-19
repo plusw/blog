@@ -11,7 +11,7 @@ function Header({ title, backgroundImage }) {
 
   const headerStyle = {
     // backgroundImage: `url(${backgroundImage || "/blog/public/source/header_2.jpg"})`,
-    backgroundImage: url("../public/source/header_2.jpg"),
+    backgroundImage: `url(${backgroundImage || "../public/source/header_2.jpg"})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100%',
   };

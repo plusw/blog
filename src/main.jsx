@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HashRouter } from 'react-router-dom';
-import Header from "./Header2.jsx"
 import ArticleList from "./ArticleList.jsx"
 import Article from "./Article.jsx"
 import About from "./About"
