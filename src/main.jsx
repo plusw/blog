@@ -8,7 +8,7 @@ import About from "./About"
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/blog">
       <Routes>
         <Route path="/blog" element={<ArticleList />} />
         <Route path="/blog/about/" element={<About />} />
