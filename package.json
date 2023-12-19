@@ -1,10 +1,5 @@
 {
   "homepage": "http://plusw.github.io/blog",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build && cp build/index.html build/404.html"
-  },
   "name": "blog",
   "private": true,
   "version": "0.0.0",
