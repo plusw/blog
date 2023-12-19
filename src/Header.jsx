@@ -17,8 +17,8 @@ function Header({ title, backgroundImage }) {
   };
 
   return (
-    // <header style={headerStyle}>
-    <header>
+    <header style={headerStyle}>
+      {/* <header> */}
       <div id="header">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container-fluid">
