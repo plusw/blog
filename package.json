@@ -1,5 +1,9 @@
 {
-  "homepage": "https://plusw.github.io/blog/",
+  "homepage": ".",
+  "name": "blog",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
