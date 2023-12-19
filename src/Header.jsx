@@ -10,13 +10,14 @@ function Header({ title, backgroundImage }) {
   }, [title]);
 
   const headerStyle = {
-    backgroundImage: `url(${backgroundImage || "#/blog/public/source/header_2.jpg"})`,
+    backgroundImage: `url(${backgroundImage || "/blog/public/source/header_2.jpg"})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100%',
   };
 
   return (
-    <header style={headerStyle}>
+    // <header style={headerStyle}>
+    <header>
       <div id="header">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container-fluid">
