@@ -9,18 +9,19 @@ import About from "./About"
 export default function App() {
   return (
     <>
-      <BrowserRouter >
+      {/* <BrowserRouter >
         <Routes>
           <Route path="/blog" element={<ArticleList />} />
           <Route path="/blog/about/" element={<About />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    {/* <ArticleList /> */}
+
+    <ArticleList />
   </React.StrictMode>,
 )
