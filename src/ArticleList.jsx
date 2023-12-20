@@ -5,7 +5,7 @@ import "./ArticleList.css"
 
 
 function ArticleList() {
-    const [markdownFiles, setMarkdownFiles] = useState(['demo01scrapyYoutube.markdown', '2015.markdown']);
+    const [markdownFiles, setMarkdownFiles] = useState(['demo01scrapyYoutube.markdown']);
     const [markdownContents, setMarkdownContents] = useState([]);
 
     useEffect(() => {

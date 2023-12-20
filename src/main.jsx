@@ -12,7 +12,7 @@ export default function App() {
       <HashRouter >
         <Routes>
           <Route path="/blog" element={<ArticleList />} />
-          <Route path="/blog/about/" element={<About />} />
+          <Route path="/about/" element={<About />} />
         </Routes>
       </HashRouter>
     </>

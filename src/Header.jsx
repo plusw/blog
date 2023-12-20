@@ -10,7 +10,7 @@ function Header({ title, backgroundImage }) {
   }, [title]);
 
   const headerStyle = {
-    backgroundImage: `url(${backgroundImage || "/blog/public/source/header_2.jpg"})`,
+    backgroundImage: `url(${backgroundImage || "https://plusw.github.io/blog_/public/source/header_2.jpg"})`,
     // backgroundImage: `url(${backgroundImage || "https://plusw.github.io/blog/public/source/header_2.jpg"})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100%',
@@ -25,12 +25,12 @@ function Header({ title, backgroundImage }) {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a id="home" className="nav-link active" aria-current="page" href="/blog/">
+                  <a id="home" className="nav-link active" aria-current="page" href="/blog/#blog">
                     Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a id="about" className="nav-link active" aria-current="page" href="/blog/about">
+                  <a id="about" className="nav-link active" aria-current="page" href="/blog/#about">
                     About
                   </a>
                 </li>
