@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import MarkdownComponent from './MarkdownComponent';
-import "./ArticleList.css"
 import Header from "./Header.jsx"
+import "./ArticleList.css"
+
 
 function ArticleList() {
     const [markdownFiles, setMarkdownFiles] = useState(['demo01scrapyYoutube.markdown', '2015.markdown']);
@@ -14,8 +15,8 @@ function ArticleList() {
                 // const response2 = await fetch(`https://plusw.github.io/blog/public/article/`);
                 // const response2 = await fetch(`/blog/public/article/`);
 
-                const response = await fetch(`https://plusw.github.io/blog/public/article/${fileName}`);
-                // const response = await fetch(`/blog/public/article/${fileName}`);
+                // const response = await fetch(`https://plusw.github.io/blog/public/article/${fileName}`);
+                const response = await fetch(`/blog/public/article/${fileName}`);
                 const data = await response.text();
                 return { fileName, data };
             });
@@ -34,7 +35,7 @@ function ArticleList() {
                 {markdownContents.map((markdownContent, index) => (
                     <>
                         <div id="articles">
-                            <MarkdownComponent key={index} source={markdownContent.data} type={"article"} />
+                            <MarkdownComponent key={index} source={markdownContent.data} type={"introduce"} />
                         </div>
                         <br />
                         <br />

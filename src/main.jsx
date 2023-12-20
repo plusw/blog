@@ -9,18 +9,18 @@ import About from "./About"
 export default function App() {
   return (
     <>
-      {/* <HashRouter >
+      <BrowserRouter >
         <Routes>
           <Route path="/blog" element={<ArticleList />} />
-          <Route path="/about/" element={<About />} />
+          <Route path="/blog/about/" element={<About />} />
         </Routes>
-      </HashRouter> */}
+      </BrowserRouter>
     </>
   );
 }
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <ArticleList />
+    {/* <ArticleList /> */}
   </React.StrictMode>,
 )
