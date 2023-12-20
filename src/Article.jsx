@@ -6,8 +6,8 @@ function Article() {
     // console.log(markdownContent2)
     useEffect(() => {
         // Fetch your Markdown content
-        //fetch('https://plusw.github.io/blog/public/article/demo01scrapyYoutube.markdown')
-        fetch('/blog/public/article/demo01scrapyYoutube.markdown')
+        fetch('https://plusw.github.io/blog_/public/article/demo01scrapyYoutube.markdown')
+            // fetch('/blog/public/article/demo01scrapyYoutube.markdown')
             .then((response) => response.text())
             .then((data) => setMarkdownContent(data));
     }, []);
