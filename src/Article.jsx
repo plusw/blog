@@ -22,7 +22,7 @@ function Article() {
 
                 {markdownContent && (
                     <div className='article'>
-                        <MarkdownComponent source={markdownContent} type={"introduce"} />
+                        <MarkdownComponent source={markdownContent} type={"article"} />
                     </div>
                 )}
             </div>
