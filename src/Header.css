@@ -7,9 +7,9 @@ header {
 
 h1.blog_title {
     text-align: center;
-    padding-top: 1.4em;
-    padding-bottom: 3em;
-    color: white;
+    padding-top: 2.5em;
+    padding-bottom: 5em;
+    color: rgb(255, 255, 255);
 }
 
 /* * {

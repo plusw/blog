@@ -4,14 +4,14 @@ import Header from "./Header.jsx"
 import "./ArticleList.css"
 
 
-function ArticleList() {
-    const [markdownFiles, setMarkdownFiles] = useState(['demo01scrapyYoutube.markdown']);
+function ArticleList({ articleNameArray }) {
+    // const [markdownFiles, setMarkdownFiles] = useState(['demo01scrapyYoutube.markdown']);
     const [markdownContents, setMarkdownContents] = useState([]);
 
     useEffect(() => {
         // Fetch Markdown content for each file
         const fetchMarkdownContent = async () => {
-            const contentPromises = markdownFiles.map(async (fileName) => {
+            const contentPromises = articleNameArray.map(async (fileName) => {
                 // const response2 = await fetch(`https://plusw.github.io/blog/public/article/`);
                 // const response2 = await fetch(`/blog/public/article/`);
 
@@ -26,11 +26,14 @@ function ArticleList() {
         };
 
         fetchMarkdownContent();
-    }, [markdownFiles]);
+    }, [articleNameArray]);
 
     return (
         <>
-            <Header />
+            <Header backgroundImage="https://plusw.github.io/blog_/public/source/img/header_witcher3.jpg" />
+            <br />
+            <br />
+            <br />
             <div className='article_container'>
                 {markdownContents.map((markdownContent, index) => (
                     <>

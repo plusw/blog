@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 
 const MarkdownComponent = (props) => {
     const { source, type } = props;
-    console.log(source)
+    // console.log(source)
     if (type == "introduce") {
         const targetString = "正文";
         const indexOfTarget = source.indexOf(targetString);
