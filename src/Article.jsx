@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MarkdownComponent from './MarkdownComponent';
 import { useParams } from 'react-router-dom';
 import Header from './Header';
+import "./Article.css"
 
 function Article() {
     const [markdownContent, setMarkdownContent] = useState('');
@@ -17,10 +18,12 @@ function Article() {
     return (
         <>
             <Header title={articleName} backgroundImage="https://plusw.github.io/blog_/public/source/img/header_bear2.jpg" />
-            <div>
+            <div id="container">
 
                 {markdownContent && (
-                    <MarkdownComponent source={markdownContent} type={"introduce"} />
+                    <div className='article'>
+                        <MarkdownComponent source={markdownContent} type={"introduce"} />
+                    </div>
                 )}
             </div>
         </>
