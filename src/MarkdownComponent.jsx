@@ -3,6 +3,12 @@ import ReactMarkdown from 'react-markdown';
 
 const MarkdownComponent = (props) => {
     const { source, type } = props;
+    const renderers = {
+        code: ({ language, value }) => {
+            return <code className={`language-${language}`}>{value}</code>;
+        },
+    };
+    const plugins = [remarkGfm];
     // console.log(source)
     if (type == "introduce") {
         const targetString = "正文";
@@ -15,7 +21,11 @@ const MarkdownComponent = (props) => {
             result = source.substring(0, indexOfTarget);
             return (
                 <div>
-                    <ReactMarkdown>{result}</ReactMarkdown>
+                    <ReactMarkdown>
+                        plugins={plugins}
+                        renderers={renderers}
+                        {result}
+                    </ReactMarkdown>
                 </div>
             );
         } else {
@@ -28,7 +38,11 @@ const MarkdownComponent = (props) => {
     } else if (type == "article") {
         return (
             <div>
-                <ReactMarkdown>{source}</ReactMarkdown>
+                <ReactMarkdown>
+                    plugins={plugins}
+                    renderers={renderers}
+                    {source}
+                </ReactMarkdown>
             </div>
         );
     }

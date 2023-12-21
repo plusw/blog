@@ -10,7 +10,7 @@ function Article() {
     useEffect(() => {
         // Fetch your Markdown content
         fetch('https://plusw.github.io/blog_/public/article/' + articleName + ".markdown")
-            // fetch('/blog/public/article/demo01scrapyYoutube.markdown')
+            // fetch('http://localhost:5174/blog/public/article/demo01scrapyYoutube.markdown')
             .then((response) => response.text())
             .then((data) => setMarkdownContent(data));
     }, []);
