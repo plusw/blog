@@ -6,7 +6,7 @@
     flex-wrap: wrap;
 }
 
-#articles {
+.articles {
     text-align: left;
     width: 60%;
     /* border: solid 2px black; */
@@ -22,7 +22,7 @@ a:hover {
 }
 
 @media (max-width: 500px) {
-    #articles {
+    .articles {
         text-align: left;
         width: 90%;
         /* border: solid 2px black; */

@@ -35,9 +35,8 @@ function ArticleList({ articleNameArray }) {
             <div className='article_container'>
                 {markdownContents.map((markdownContent, index) => (
                     <>
-                        <div id="articles">
+                        <div className="articles">
                             <ArticleLoader key={index} source={markdownContent.data} type={"introduce"} />
-
                         </div>
                         <br />
                         <br />

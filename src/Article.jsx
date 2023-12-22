@@ -21,7 +21,7 @@ function Article() {
             <div id="container">
 
                 {markdownContent && (
-                    <div className='article'>
+                    <div className='articles'>
                         <ArticleLoader source={markdownContent} type={"article"} />
                     </div>
                 )}
