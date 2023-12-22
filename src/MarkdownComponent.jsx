@@ -1,51 +1,29 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import OmsSyntaxHighlight from './OmsSyntaxHighlight';
 
 const MarkdownComponent = (props) => {
-    const { source, type } = props;
-    const renderers = {
-        code: ({ language, value }) => {
-            return <code className={`language-${language}`}>{value}</code>;
+    const { source } = props;
+    // 自定义渲染器，用于匹配```代码块并使用OmsSyntaxHighlight渲染
+    const components = {
+        code: ({ node, inline, className, children, ...props }) => {
+            const match = /language-(\w+)/.exec(className || '');
+            return !inline && match ? (
+                <OmsSyntaxHighlight textContent={String(children).replace(/\n$/, '')} language={match[1]} darkMode={true} />
+            ) : (
+                <code className={className} {...props}>
+                    {children}
+                </code>
+            );
         },
     };
-    const plugins = [remarkGfm];
-    // console.log(source)
-    if (type == "introduce") {
-        const targetString = "正文";
-        const indexOfTarget = source.indexOf(targetString);
-
-        let result;
-
-        // 如果找到了目标字符串，就截取之前的部分；否则保持原始字符串
-        if (indexOfTarget !== -1) {
-            result = source.substring(0, indexOfTarget);
-            return (
-                <div>
-                    <ReactMarkdown>
-                        plugins={plugins}
-                        renderers={renderers}
-                        {result}
-                    </ReactMarkdown>
-                </div>
-            );
-        } else {
-            return (
-                <div>
-                    <ReactMarkdown>{source}</ReactMarkdown>
-                </div>
-            );
-        }
-    } else if (type == "article") {
-        return (
-            <div>
-                <ReactMarkdown>
-                    plugins={plugins}
-                    renderers={renderers}
-                    {source}
-                </ReactMarkdown>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <ReactMarkdown components={components}>
+                {source}
+            </ReactMarkdown>
+        </div>
+    );
 };
 
 export default MarkdownComponent;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import MarkdownComponent from './MarkdownComponent';
 import { useParams } from 'react-router-dom';
 import Header from './Header';
 import "./Article.css"
+import ArticleLoader from './ArticleLoader';
 
 function Article() {
     const [markdownContent, setMarkdownContent] = useState('');
@@ -22,7 +22,7 @@ function Article() {
 
                 {markdownContent && (
                     <div className='article'>
-                        <MarkdownComponent source={markdownContent} type={"article"} />
+                        <ArticleLoader source={markdownContent} type={"article"} />
                     </div>
                 )}
             </div>

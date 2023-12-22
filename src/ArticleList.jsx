@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import MarkdownComponent from './MarkdownComponent';
 import Header from "./Header.jsx"
 import "./ArticleList.css"
+import ArticleLoader from './ArticleLoader.jsx';
+import Test from './Test.jsx';
 
 
 function ArticleList({ articleNameArray }) {
@@ -38,7 +39,8 @@ function ArticleList({ articleNameArray }) {
                 {markdownContents.map((markdownContent, index) => (
                     <>
                         <div id="articles">
-                            <MarkdownComponent key={index} source={markdownContent.data} type={"introduce"} />
+                            <ArticleLoader key={index} source={markdownContent.data} type={"introduce"} />
+
                         </div>
                         <br />
                         <br />
