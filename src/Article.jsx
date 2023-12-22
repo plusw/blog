@@ -17,7 +17,7 @@ function Article() {
 
     return (
         <>
-            <Header title={articleName} backgroundImage="https://plusw.github.io/blog_/public/source/img/header_bear2.jpg" />
+            <Header title={articleName} h1Color="black" backgroundImage="https://plusw.github.io/blog_/public/source/img/header_bear2.jpg" />
             <div id="container">
 
                 {markdownContent && (
