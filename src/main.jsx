@@ -5,6 +5,7 @@ import { HashRouter } from 'react-router-dom';
 import ArticleList from './ArticleList.jsx';
 import Article from './Article.jsx';
 import About from './About';
+import { convertAniBinaryToCSS } from 'ani-cursor';
 
 const App = () => {
   const [articleNameArray, setArticleNameArray] = useState([]);
@@ -31,7 +32,21 @@ const App = () => {
   useEffect(() => {
     // Call the API function when the component mounts
     apiGetArticleName();
+    applyCursor('#root', 'https://plusw.github.io/blog_/public/source/rotate.ani');
   }, []); // Run once on mount
+
+  //ani 鼠标
+  const applyCursor = async (selector, aniUrl) => {
+    try {
+      const response = await fetch(aniUrl);
+      const data = new Uint8Array(await response.arrayBuffer());
+      const style = document.createElement('style');
+      style.innerText = convertAniBinaryToCSS(selector, data);
+      document.head.appendChild(style);
+    } catch (error) {
+      console.error('Cursor fetch error:', error);
+    }
+  };
 
   return (
     <>
