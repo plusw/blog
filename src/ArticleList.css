@@ -20,3 +20,11 @@ a {
 a:hover {
     color: rgb(115, 209, 233);
 }
+
+@media (max-width: 500px) {
+    #articles {
+        text-align: left;
+        width: 90%;
+        /* border: solid 2px black; */
+    }
+}

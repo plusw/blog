@@ -7,8 +7,8 @@ header {
 
 h1.blog_title {
     text-align: center;
-    padding-top: 2.5em;
-    padding-bottom: 5em;
+    padding-top: 7em;
+    padding-bottom: 0em;
     color: rgb(255, 255, 255);
 }
 
@@ -32,4 +32,37 @@ a.nav-link {
 .card {
     margin: auto;
     /* text-align: left; */
+}
+
+@media (max-width: 768px) {
+    h1.blog_title {
+        padding-top: 5em;
+        /* 调整标题的上边距 */
+    }
+
+    .navbar-nav>li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1.blog_title {
+        padding-top: 6em;
+        /* 进一步调整标题的上边距 */
+    }
+}
+
+@media (max-width: 400px) {
+    h1.blog_title {
+        padding-top: 4em;
+        /* 进一步调整标题的上边距 */
+    }
+}
+
+@media (max-width: 300px) {
+    h1.blog_title {
+        padding-top: 3em;
+        /* 进一步调整标题的上边距 */
+    }
 }

@@ -32,9 +32,6 @@ function ArticleList({ articleNameArray }) {
     return (
         <>
             <Header backgroundImage="https://plusw.github.io/blog_/public/source/img/header_witcher3.jpg" />
-            <br />
-            <br />
-            <br />
             <div className='article_container'>
                 {markdownContents.map((markdownContent, index) => (
                     <>
