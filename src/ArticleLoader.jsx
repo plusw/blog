@@ -6,7 +6,7 @@ const ArticleLoader = (props) => {
     let result = source;
     // console.log(source)
     if (type == "introduce") {
-        const targetString = "简介";
+        const targetString = "前言";
         const indexOfTarget = source.indexOf(targetString);
         // 如果找到了"正文"，就截取正文之前的部分；否则保持原始
         if (indexOfTarget !== -1) {
