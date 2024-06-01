@@ -8,7 +8,7 @@ const ArticleLoader = (props) => {
     if (type == "introduce") {
         const targetString = "####";
         const indexOfTarget = source.indexOf(targetString);
-        // 如果找到了"正文"，就截取正文之前的部分；否则保持原始
+        // 如果找到了""，就截取、之前的部分；否则保持原始
         if (indexOfTarget !== -1) {
             result = source.substring(0, indexOfTarget);
         }

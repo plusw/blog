@@ -32,7 +32,7 @@ const App = () => {
   useEffect(() => {
     // Call the API function when the component mounts
     apiGetArticleName();
-    applyCursor('#root', 'https://plusw.github.io/blog_/public/source/rotate.ani');
+    applyCursor('#root', 'https://plusw.github.io/blog_/public/source/1.ani');
   }, []); // Run once on mount
 
   //ani 鼠标
